@@ -1,59 +1,43 @@
-# RusherHack Example Plugin
+<h1 align="center">Custom Capes</h1>
+<p align="center">
+<b>A high-performance, client-side cosmetic extension for RusherHack.</b>
+</p>
 
-An example implementation of a RusherHack plugin. 
+## Overview
 
-RusherHack plugins are custom add-ons written by developers to add new features to RusherHack.
+**Custom Capes** is a specialized plugin for RusherHack that allows you to customize any Minecraft cape. The plugin was designed with performance in mind.
 
-## Setting up the Development Environment
+[!IMPORTANT]
+Client-side only: Capes will be visible only to you, other players will see your standard cape
 
-### Installing Java Development Kit (JDK)
+## Key Features
 
-For Minecraft versions 1.20.1-1.20.4, you will need to have JDK 17 installed. You can download it [here](https://www.azul.com/downloads/?version=java-17-lts&package=jdk#zulu).
+### Rendering
 
-For Minecraft versions 1.20.5 and newer, you will need to have JDK 21 installed. You can download it [here](https://www.azul.com/downloads/?version=java-21-lts&package=jdk#zulu).
+- **Dynamic Cape Loading:** Allows you to load capes from the plugin's folder without leaving the game.
+- **Elytra Sync:** Your texture will be visible not only on the cape, but also on the elytras
 
-### Installing IntelliJ IDEA
+### Customization
 
-IntelliJ IDEA is the preferred Java IDE for rusherhack plugin development.
+- **Only for me:** This setting allows you to see the custom cape only on yourself.
+- **Real-time Selection:** Instant switching between capes directly in the module settings
 
-IntelliJ IDEA can be downloaded from [the official website](https://www.jetbrains.com/idea/download).
+## Commands
 
-The Community edition is recommended because it is free and open-source.
+- **\*cape reload** Updates the list of available capes
 
-## Clone the repository
+## How to Use
 
-In IntelliJ, when creating a new project there is an option to clone a repository:
+1. After the first launch, you will have a folder /rusherhack/capes/
+2. Place the cape texture into the /rusherhack/capes/ folder
+3. Enter the command **\*cape reload** in the chat to load capes from the folder
 
-<img src="https://rusherhack.org/i/zsa4nyb3v3m5ifk8gkyoywak.png" alt="cloning" width="600"/>
+## Installation
 
-In the URL, write the text `https://github.com/RusherDevelopment/example-plugin.git` and press `Clone` 
+1. Download the latest `.jar` from the [Releases](https://github.com/FelekDevYT/MoreHuds-rusherhack/releases/tag/1.0) page.
+2. Ensure you have the JVM flag `-Drusherhack.enablePlugins=true` added to your Minecraft launcher.
+3. Place the file into your `.minecraft/rusherhack/plugins` directory.
+4. Launch Minecraft and enable your desired HUD elements from the RusherHack HUD editor.
 
-<img src="https://rusherhack.org/i/2rdwc40q98ihb93lt1yykyw8.png" alt="cloning2" width="600"/>
-
-IntelliJ may prompt you asking if you trust the project. Click `Trust Project` to continue.
-
-You should now have a window that looks like this: 
-
-<img src="https://rusherhack.org/i/vwvie6ljusi2tfunyrmvty7j.png" alt="project" width="800"/>
-
-## Modifying the template
-
-- Open the `gradle.properties` file and modify it to your preferences.
-- Open the `src/main/resources/rusherhack-plugin.json` file and modify it to your preferences.
-  - The `Plugin-Class` property must match the main class of your plugin.
-  - The `Name`, `Version`, and `Minecraft-Versions` properties get automatically filled by the values in the `gradle.properties` file. You can add more Minecraft versions if you wish but compatibility between multiple versions is not guaranteed.
-
-## Building the plugin
-
-To build the plugin .jar file, you can run the `gradle build` task.
-
-1. Click on the elephant icon on the right of the screen (Gradle)
-2. Navigate to `Tasks` -> `build` -> `build` and double-click it: 
-
-<img src="https://rusherhack.org/i/jkdw12a3wtsz9vvwpvujo9px.png" alt="gradle" width="400"/>
-
-3. The compiled plugin .jar file will be located in the `build/libs` directory: 
-
-<img src="https://rusherhack.org/i/lfwho6o6vrqc4c3znl3pm60v.png" alt="build" width="400"/>
-
-To install the plugin into RusherHack, you can follow the instructions on the [RusherHack plugins repository](https://github.com/RusherDevelopment/rusherhack-plugins?tab=readme-ov-file#installation)
+> [!WARNING]
+> This plugin is built specifically for **RusherHack v2.0.7** on **Minecraft 1.21.4**. Using it on older versions may cause instability.
