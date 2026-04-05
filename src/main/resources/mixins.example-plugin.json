@@ -4,6 +4,6 @@
   "package": "me.felek.customcapes.mixins",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "CapeMixin"
+    "MixinPlayerInfo"
   ]
 }

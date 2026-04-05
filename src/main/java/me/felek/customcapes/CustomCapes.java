@@ -14,6 +14,8 @@ public class CustomCapes extends Plugin {
 	public void onLoad() {
         RusherHackAPI.getModuleManager().registerFeature(new CustomCapeModule());
         RusherHackAPI.getCommandManager().registerFeature(new CapeCommand());
+
+		CustomCapeModule.INSTANCE.loadCapes();
 	}
 	
 	@Override
